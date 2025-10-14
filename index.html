@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenvault | Global Enterprise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet" />
+      <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico  " />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f0f9f4',
+                100: '#dcf2e3',
+                200: '#bce5ca',
+                300: '#8dd2a6',
+                400: '#57b87d',
+                500: '#339d5f',
+                600: '#25804c',
+                700: '#1e6540',
+                800: '#1a5135',
+                900: '#16422d',
+              },
+              accent: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                800: '#9a3412',
+                900: '#7c2d12',
+              },
+            },
+            fontFamily: {
+              heading: ['Montserrat', 'sans-serif'],
+              body: ['Open Sans', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(25, 74, 48, 0.9) 0%,
+          rgba(30, 101, 64, 0.8) 100%
+        );
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .transition-all {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="font-body">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <div
+              class="h-10 w-10 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold mr-2">
+              GV
+            </div>
+            <a href="#" class="text-xl font-heading font-bold text-primary-800"
+              >GREENVAULT</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="menu-toggle"
+              class="text-primary-700 focus:outline-none">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              class="text-primary-700 hover:text-primary-500 font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-primary-700 hover:text-primary-500 font-medium transition-colors"
+              >Services</a
+            >
+            <a
+              href="#contact"
+              class="text-primary-700 hover:text-primary-500 font-medium transition-colors"
+              >Contact</a
+            >
+            <a
+              href="#contact"
+              class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors"
+              >Get Quote</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden py-4 border-t border-gray-200">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#about"
+              class="text-primary-700 hover:text-primary-500 font-medium"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-primary-700 hover:text-primary-500 font-medium"
+              >Services</a
+            >
+            <a
+              href="#contact"
+              class="text-primary-700 hover:text-primary-500 font-medium"
+              >Contact</a
+            >
+            <a
+              href="#contact"
+              class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium text-center"
+              >Get Quote</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gray-900 relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center"></div>
+      <div class="absolute inset-0 hero-gradient"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
+            Greenvault Global Enterprise
+          </h1>
+          <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Your trusted partner for construction, electrical, and alternative
+            energy solutions since 1989.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#contact"
+              class="bg-accent-500 hover:bg-accent-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+              Book a Consultation
+            </a>
+            <a
+              href="#services"
+              class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-6 rounded-lg backdrop-blur-sm transition-colors">
+              Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-primary-800 mb-4">
+            Generations of Exceptional Service
+          </h2>
+          <div class="h-1 w-20 bg-accent-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            GREENVAULT GLOBAL ENTERPRISE was founded in 1989, your go-to for
+            Electrical and Construction solutions. Our team comprises experts
+            with BSc and National N Diplomas in Civil and Electrical
+            Engineering, as well as Certified Electricians.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-heading font-bold text-primary-800 mb-4">
+              Our Expertise
+            </h3>
+            <p class="text-gray-700 mb-4">
+              We specialise in residential, commercial, and industrial electrical solutions — from fault finding and repairs to full installations and compliance inspections.
+            </p>
+            <p class="text-gray-700">
+              Contact us today to discuss your electrical needs, and let Greenvault Electrical power your home or business with safe, reliable, and professional service.
+            </p>
+          </div>
+
+          <div class="bg-primary-700 text-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-heading font-bold mb-4">Why Choose Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent-400 mt-1 mr-3"></i>
+                <span>Over 30 years of industry experience</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent-400 mt-1 mr-3"></i>
+                <span>Certified and qualified professionals</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent-400 mt-1 mr-3"></i>
+                <span>Comprehensive service portfolio</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent-400 mt-1 mr-3"></i>
+                <span>Commitment to quality and safety</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="inline-block mt-6 bg-white text-primary-700 font-medium py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+              Enquire Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-primary-800 mb-4">
+            At Your Service
+          </h2>
+          <div class="h-1 w-20 bg-accent-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            We offer a comprehensive range of electrical, construction, and
+            specialized services to meet all your project needs.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <!-- Service Card 1 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition-all">
+            <div class="text-primary-600 mb-4">
+              <i class="fas fa-stamp text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary-800 mb-3">
+              Certificate Of Compliance
+            </h3>
+            <p class="text-gray-600">
+              A Electrical Certificate of Compliance (COC) verifies that
+              electrical installations comply with the Occupational Health and
+              Safety Act requirements.
+            </p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition-all">
+            <div class="text-primary-600 mb-4">
+              <i class="fas fa-bolt text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary-800 mb-3">
+              Inverter Installation
+            </h3>
+            <p class="text-gray-600">
+              With load shedding still being part of our reality, we have the
+              best power solutions for your needs, from battery backup to
+              solar-ready systems.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition-all">
+            <div class="text-primary-600 mb-4">
+              <i class="fas fa-plug-circle-check text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary-800 mb-3">
+              Electrical Rewiring
+            </h3>
+            <p class="text-gray-600">
+              We understand that your electrical system is the lifeline of your
+              property. Our rewiring services ensure safety and efficiency.
+            </p>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div
+            class="service-card bg-white rounded-xl shadow-md p-6 border border-gray-100 transition-all">
+            <div class="text-primary-600 mb-4">
+              <i class="fas fa-person-digging text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary-800 mb-3">
+              Construction Services
+            </h3>
+            <p class="text-gray-600">
+              We transform your architectural visions into reality with quality,
+              innovation, and precision for both residential and commercial
+              projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Details Accordion -->
+        <div class="max-w-4xl mx-auto">
+          <h3
+            class="text-2xl font-heading font-bold text-primary-800 mb-6 text-center">
+            Our Complete Service Portfolio
+          </h3>
+
+          <!-- Accordion Item 1 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="accordion-toggle w-full text-left p-4 bg-primary-50 hover:bg-primary-100 transition-colors flex justify-between items-center">
+              <span class="font-heading font-bold text-primary-800"
+                >Electrical Services</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content hidden p-4 bg-white">
+              <ul class="grid md:grid-cols-2 gap-2">
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Domestic Wiring and Maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Industrial Wiring and Maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Electrical Control Panels (AC & DC)</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Installation of 3-phase Motors</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Wiring of Single and 3-phase Meters</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>New and Old Electrical Installation</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Installation of Petrol Pump Machine</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Street Lights Installation & Maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span
+                    >Generator Installation, Servicing & Control Panels</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Installation of Security Cameras</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="accordion-toggle w-full text-left p-4 bg-primary-50 hover:bg-primary-100 transition-colors flex justify-between items-center">
+              <span class="font-heading font-bold text-primary-800"
+                >Construction and Renovation</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content hidden p-4 bg-white">
+              <ul class="grid md:grid-cols-2 gap-2">
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Painting</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Tiling</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Building Renovation</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Kitchen Remodel</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Fitted Cupboards & Bedroom Cupboards</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Fitted/Floating TV Stands</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Building Backup Generators</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Supply and Delivery of Building Materials</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="accordion-toggle w-full text-left p-4 bg-primary-50 hover:bg-primary-100 transition-colors flex justify-between items-center">
+              <span class="font-heading font-bold text-primary-800"
+                >Specialized Services</span
+              >
+              <i
+                class="fas fa-chevron-down text-primary-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content hidden p-4 bg-white">
+              <ul class="grid md:grid-cols-2 gap-2">
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Renewable Energy</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    class="fas fa-arrow-right text-accent-500 mt-1 mr-2 text-sm"></i>
+                  <span>Logistics (Transporting Minerals)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary-800 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+            Let's Get In Touch!
+          </h2>
+          <div class="h-1 w-20 bg-accent-500 mx-auto mb-6"></div>
+          <p class="text-lg text-primary-100 max-w-3xl mx-auto">
+            Ready to start your next project with us? Send us a message and we
+            will get back to you as soon as possible!
+          </p>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+          <form id="contactForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block mb-2 font-medium"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full p-3 rounded-lg bg-primary-700 border border-primary-600 focus:border-accent-500 focus:outline-none transition-colors"
+                  required />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full p-3 rounded-lg bg-primary-700 border border-primary-600 focus:border-accent-500 focus:outline-none transition-colors"
+                  required />
+              </div>
+            </div>
+
+            <div>
+              <label for="phone" class="block mb-2 font-medium"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                class="w-full p-3 rounded-lg bg-primary-700 border border-primary-600 focus:border-accent-500 focus:outline-none transition-colors"
+                required />
+            </div>
+
+            <div>
+              <label for="message" class="block mb-2 font-medium"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="5"
+                class="w-full p-3 rounded-lg bg-primary-700 border border-primary-600 focus:border-accent-500 focus:outline-none transition-colors"
+                required></textarea>
+            </div>
+
+            <button
+              type="button"
+              onclick="sendWhatsAppMessage()"
+              class="w-full bg-accent-500 hover:bg-accent-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i> Submit
+            </button>
+          </form>
+
+          <div class="mt-12 text-center">
+            <div class="flex justify-center mb-4">
+              <i class="fas fa-phone text-2xl text-accent-400"></i>
+            </div>
+            <a
+              href="tel:0810002562"
+              class="text-xl font-medium hover:text-accent-400 transition-colors"
+              >081 000 2562</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-primary-300">
+  Copyright &copy; <span id="year"></span> - Greenvault | Global Enterprise
+</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById('menu-toggle')
+        .addEventListener('click', function () {
+          const menu = document.getElementById('mobile-menu');
+          menu.classList.toggle('hidden');
+        });
+
+      // Accordion functionality
+      document.querySelectorAll('.accordion-toggle').forEach((button) => {
+        button.addEventListener('click', () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector('i');
+
+          // Toggle current accordion
+          content.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+
+          // Close other accordions
+          document
+            .querySelectorAll('.accordion-toggle')
+            .forEach((otherButton) => {
+              if (otherButton !== button) {
+                otherButton.nextElementSibling.classList.add('hidden');
+                otherButton.querySelector('i').classList.remove('rotate-180');
+              }
+            });
+        });
+      });
+
+      // WhatsApp message function
+      function sendWhatsAppMessage() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !phone || !message) {
+          alert('Please fill in all fields before submitting.');
+          return;
+        }
+
+        const text = `Hello Greenvault Global Enterprise,\n\nI would like to enquire about your services.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}\n\nThank you!`;
+        const encodedText = encodeURIComponent(text);
+        const whatsappUrl = `https://wa.me/27810002562?text=${encodedText}`;
+
+        window.open(whatsappUrl, '_blank');
+      }
+    </script>
+  </body>
+</html>
